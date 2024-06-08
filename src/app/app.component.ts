@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
+// import { Signu } from './signup-form/signup-form.component';
+import { SigninFormComponent } from './components/signin-form/signin-form.component';
+import { SigninIntroComponent } from './components/signin-intro/signin-intro.component';
+import { SignupIntroComponent } from './components/signup-intro/signup-intro.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularLogin';
+  isSignup: boolean = true;
+
+  toggleForm() {
+    console.log('this.isSignup');
+    
+    this.isSignup = !this.isSignup;
+  }
 }

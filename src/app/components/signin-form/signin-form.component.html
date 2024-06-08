@@ -1,0 +1,9 @@
+<div class="form-control signin-form">
+    <form (ngSubmit)="onSubmit()">
+      <h2>Signin</h2>
+      <input type="text" placeholder="Username" required [(ngModel)]="username" name="username" />
+      <input type="password" placeholder="Password" required [(ngModel)]="password" name="password" />
+      <button type="submit">Signin</button>
+    </form>
+  </div>
+  

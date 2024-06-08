@@ -1,0 +1,17 @@
+<div class="form-control signup-form">
+    <form (ngSubmit)="onSubmit()">
+      <h2>Signup</h2>
+      <input type="text" placeholder="Username" required [(ngModel)]="username" name="username" />
+      <input type="email" placeholder="Email" required [(ngModel)]="email" name="email" />
+      <input type="password" placeholder="Password" required [(ngModel)]="password" name="password" />
+      <input type="password" placeholder="Confirm password" required [(ngModel)]="confirmPassword" name="confirmPassword" />
+      <button type="submit">Signup</button>
+    </form>
+    <span>or signup with</span>
+    <div class="socials">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+  </div>
+  
