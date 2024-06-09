@@ -16,7 +16,7 @@ import { SignupIntroComponent } from './components/signup-intro/signup-intro.com
 export class AppComponent {
   isSignup: boolean = true;
 
-  toggleForm() {
+  onToggleForm() {
     console.log('this.isSignup');
     
     this.isSignup = !this.isSignup;

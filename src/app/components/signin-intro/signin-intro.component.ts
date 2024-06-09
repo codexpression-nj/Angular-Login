@@ -12,5 +12,6 @@ export class SigninIntroComponent {
   onToggleForm() {
     this.toggleSigninForm.emit();
     console.log( this.toggleSigninForm.emit());
+    
   }
 }
