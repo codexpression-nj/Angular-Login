@@ -41,7 +41,7 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 480px;
-  transition: all 0.5s ease-in;
+  transition: all 0.10s ease-in;
 }
 
 .container .forms-container .form-control h2 {
@@ -66,7 +66,7 @@ body {
   border: none;
   padding: 20px;
   margin-top: 5px;
-  background-color: #7E6093;
+  background-color: #34d399;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -88,7 +88,7 @@ body {
 
 .container .forms-container .form-control .socials .fa-facebook-f {
   padding: 5px 8px;
-  background-color: #3b5998;
+  background-color: #09A9A4;
 }
 
 .container .forms-container .form-control .socials .fa-google-plus-g {
@@ -174,7 +174,7 @@ body {
 }
 
 .change .forms-container .form-control.signup-form button {
-  background-color: #2563eb !important;
+  background-color: #34d399 !important;
 }
 
 .change .forms-container .form-control.signin-form {
@@ -185,11 +185,13 @@ body {
 
 .change .intros-container .intro-control {
   transform: translateX(-100%);
-  background: linear-gradient(170deg, #3b82f6, #2563eb);
+  /* background: linear-gradient(170deg, #3b82f6, #2563eb);   */
+  background: linear-gradient(170deg, #34d399, #059669);
+
 }
 
 .change .intros-container .intro-control #signin-btn {
-  background-color: #2563eb;
+  background-color: #34d399;
 }
 
 .change .intros-container .intro-control.signin-intro {

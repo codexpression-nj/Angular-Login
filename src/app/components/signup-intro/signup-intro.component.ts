@@ -9,9 +9,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class SignupIntroComponent {
   @Output() toggleSignupForm = new EventEmitter<void>();
 
-  onToggleForm() {
-    console.log( this.toggleSignupForm.emit());
-    
+  onToggleForm() {    
     this.toggleSignupForm.emit();
   }
 }

@@ -10,8 +10,6 @@ export class SigninIntroComponent {
   @Output() toggleSigninForm = new EventEmitter<void>();
 
   onToggleForm() {
-    this.toggleSigninForm.emit();
-    console.log( this.toggleSigninForm.emit());
-    
+    this.toggleSigninForm.emit();     
   }
 }
