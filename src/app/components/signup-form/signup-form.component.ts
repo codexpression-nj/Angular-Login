@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup-form',
@@ -13,8 +14,17 @@ export class SignupFormComponent {
   email: string = '';
   password: string = '';
   confirmPassword: string = '';
+  errorMessage: string = '';
 
-  onSubmit() {
-    // Handle form submission logic here
-  }
+   constructor(private authService:AuthService) {
+   }
+
+ async onSubmit() {
+
+    try {
+      await this.authService.signUp(this.email, this.password);
+      console.log('Sign-in successful!');
+    } catch (error) {
+      // this.errorMessage = error.;
+    }  }
 }
