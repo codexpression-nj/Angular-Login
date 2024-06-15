@@ -5,11 +5,12 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
 import { SigninFormComponent } from './components/signin-form/signin-form.component';
 import { SigninIntroComponent } from './components/signin-intro/signin-intro.component';
 import { SignupIntroComponent } from './components/signup-intro/signup-intro.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent],
+  imports: [CommonModule,RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

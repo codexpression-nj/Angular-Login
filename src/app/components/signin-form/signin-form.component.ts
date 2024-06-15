@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin-form',
@@ -14,17 +15,19 @@ export class SigninFormComponent {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private authService : AuthService) {
+  constructor(private authService : AuthService, private router:Router) {
     
   }
   
 
  async onSubmit() {
 
-  try {
-    await this.authService.signIn(this.username, this.password);
-    console.log('Sign-in successful!');
-  } catch (error) {
-    // this.errorMessage = error.message;
-  }}
+  // try {
+  //   await this.authService.signIn(this.username, this.password);
+  //   console.log('Sign-in successful!');
+  // } catch (error) {
+  // }
+  this.router.navigateByUrl("home-component")
+
+}
 }
