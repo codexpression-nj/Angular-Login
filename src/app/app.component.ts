@@ -6,16 +6,24 @@ import { SigninFormComponent } from './components/signin-form/signin-form.compon
 import { SigninIntroComponent } from './components/signin-intro/signin-intro.component';
 import { SignupIntroComponent } from './components/signup-intro/signup-intro.component';
 import { RouterOutlet } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from './services/auth.service';
+import { HomeComponent } from "./components/home/home.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule,RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    imports: [CommonModule, RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent, HomeComponent]
 })
 export class AppComponent {
   isSignup: boolean = true;
+  isLoggedIn = true;
+
+  constructor(private authService:AuthService){
+
+  }
 
   onToggleForm() {
     this.isSignup = !this.isSignup;

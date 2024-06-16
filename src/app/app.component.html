@@ -1,3 +1,8 @@
+
+<ng-container *ngIf="isLoggedIn ; else showSignIn">
+  <app-home></app-home>
+</ng-container>
+<ng-template #showSignIn>
 <div class="container" [ngClass]="{ change: isSignup }">
   <div class="forms-container">
     <app-signup-form></app-signup-form>
@@ -8,5 +13,6 @@
     <app-signup-intro (toggleSignupForm)="onToggleForm()"></app-signup-intro>
   </div>
 </div>
+</ng-template>
 <router-outlet></router-outlet>
 
