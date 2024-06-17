@@ -10,6 +10,11 @@
 }
 
 body {
+  height: 100%;
+
+}
+
+body .form-box{
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -258,4 +263,5 @@ body {
   .change .intros-container .intro-control {
     transform: translateX(0);
   }
+  
 }

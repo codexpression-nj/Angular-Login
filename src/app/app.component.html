@@ -2,17 +2,22 @@
 <ng-container *ngIf="isLoggedIn ; else showSignIn">
   <app-home></app-home>
 </ng-container>
-<ng-template #showSignIn>
-<div class="container" [ngClass]="{ change: isSignup }">
-  <div class="forms-container">
-    <app-signup-form></app-signup-form>
-    <app-signin-form></app-signin-form>
+<!-- <app-home></app-home> -->
+
+<ng-template #showSignIn >
+  <div class="form-box">
+    <div class="container" [ngClass]="{ change: isSignup }">
+      <div class="forms-container">
+        <app-signup-form></app-signup-form>
+        <app-signin-form></app-signin-form>
+      </div>
+      <div class="intros-container">
+        <app-signin-intro (toggleSigninForm)="onToggleForm()"></app-signin-intro>
+        <app-signup-intro (toggleSignupForm)="onToggleForm()"></app-signup-intro>
+      </div>
+    </div>
   </div>
-  <div class="intros-container">
-    <app-signin-intro (toggleSigninForm)="onToggleForm()"></app-signin-intro>
-    <app-signup-intro (toggleSignupForm)="onToggleForm()"></app-signup-intro>
-  </div>
-</div>
+
 </ng-template>
 <router-outlet></router-outlet>
 

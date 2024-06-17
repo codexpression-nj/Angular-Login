@@ -27,7 +27,5 @@ export class AppComponent {
 
   onToggleForm() {
     this.isSignup = !this.isSignup;
-    console.log('this.isSign' +  this.isSignup);
-
   }
 }
