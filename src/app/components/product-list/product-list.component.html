@@ -1,1 +1,10 @@
-<p>product-list works!</p>
+<!-- src/app/components/product-list/product-list.component.html -->
+<div class="product-list">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.image" alt="{{ product.title }}">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.description }}</p>
+      <p><strong>Price:</strong> {{ product.price  }}</p>
+    </div>
+  </div>
+  
