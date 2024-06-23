@@ -1,4 +1,11 @@
 <!-- src/app/components/product-list/product-list.component.html -->
+<div class="category-select">
+  <label for="categories">Filter by category:</label>
+  <select id="categories" (change)="onCategoryChange($event)">
+    <option value="">All</option>
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+</div>
 <div class="product-list">
     <div class="product-card" *ngFor="let product of products">
       <img [src]="product.image" alt="{{ product.title }}">

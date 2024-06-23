@@ -21,5 +21,9 @@
     getCategories(): Observable<any> {
       return this.http.get(`${this.apiUrl}/categories`);
     }
+  
+    getProductsByCategory(category: string): Observable<any> {
+      return this.http.get(`${this.apiUrl}/category/${category}`);
+    }
     
   }
