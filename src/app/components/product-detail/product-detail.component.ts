@@ -3,10 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [],
+  imports: [ ],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
 export class ProductDetailComponent {
+  editProduct() {
+  }
 
+  confirmDelete() {
+  
+  }
+
+  deleteProduct() {
+  }
 }
