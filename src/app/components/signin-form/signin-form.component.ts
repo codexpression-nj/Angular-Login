@@ -18,16 +18,12 @@ export class SigninFormComponent {
   constructor(private authService : AuthService, private router:Router) {
     
   }
-  
 
  async onSubmit() {
-
-  // try {
-  //   await this.authService.signIn(this.username, this.password);
-  //   console.log('Sign-in successful!');
-  // } catch (error) {
-  // }
-  this.router.navigateByUrl("home-component")
-
+  try {
+    await this.authService.signIn(this.username, this.password);
+    console.log('Sign-in successful!');
+  } catch (error) {
+  }
 }
 }

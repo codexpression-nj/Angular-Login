@@ -11,6 +11,8 @@
     constructor(private http: HttpClient) { }
     
     getProducts(): Observable<any> {
+      console.log('this.products');
+      fetch(this.apiUrl)
       return this.http.get(this.apiUrl);
     }
   

@@ -9,13 +9,14 @@ import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from "./components/home/home.component";
+import { ProductListComponent } from "./components/product-list/product-list.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent, HomeComponent]
+    imports: [CommonModule, RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent, HomeComponent, ProductListComponent]
 })
 export class AppComponent {
   isSignup: boolean = true;

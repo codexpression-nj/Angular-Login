@@ -26,18 +26,19 @@ ngOnInit(): void {
   });
 }
 
-onCategoryChange(category: Event): void {
-
-  // this.selectedCategory = category.currentTarget ;
-  // if (category === '') {
-  //   this.productService.getProducts().subscribe((data: any[]) => {
-  //     this.products = data;
-  //   });
-  // } else {
-  //   this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
-  //     this.products = data;
-  //   });
-  // }
+onCategoryChange(event: Event): void {
+  const selectElement = event.target as HTMLSelectElement;
+  const category = selectElement.value;
+  this.selectedCategory = category;
+  if (category === '') {
+    this.productService.getProducts().subscribe((data: any[]) => {
+      this.products = data;
+    });
+  } else {
+    this.productService.getProductsByCategory(category).subscribe((data: any[]) => {
+      this.products = data;
+    });
+  }
 }
 
 }

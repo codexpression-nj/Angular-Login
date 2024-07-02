@@ -5,10 +5,12 @@ import { routes } from './app.routes';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import {  provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
-      provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-      provideAuth(() => getAuth()),
+  provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+  provideAuth(() => getAuth()),
+    provideHttpClient()
   ]
 };

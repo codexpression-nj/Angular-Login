@@ -1,12 +1,18 @@
 <div class="column gap-1">
   <!-- Add Product Button -->
-  <button
+  <!-- <button
     type="button"
     pButton
     icon="pi pi-plus"
     label="Add Product"
     class="add-product-btn"
-  ></button>
+  ></button> -->
+  <div class="row wrap gap-2 space-between">
+    <app-product-detail
+      *ngFor="let product of products"
+
+    ></app-product-detail>
+  </div>
 </div>
 
   
