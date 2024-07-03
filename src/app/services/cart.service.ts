@@ -12,6 +12,8 @@ export class CartService {
 
   addToCart(product: any) {
     const currentCart = this.cart.value;
+    console.log(this.cart.value);
+    
     this.cart.next([...currentCart, product]);
   }
 

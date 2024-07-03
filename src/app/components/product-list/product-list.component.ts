@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { NgFor } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +15,7 @@ export class ProductListComponent {
   categories: any[] = [];
   selectedCategory: string = '';
 
-constructor(private productService:ProductsService){
+constructor(private productService:ProductsService,private cartService:CartService){
 
 }
 ngOnInit(): void {
@@ -39,6 +40,10 @@ onCategoryChange(event: Event): void {
       this.products = data;
     });
   }
+}
+
+addToCart(product: any) {
+  this.cartService.addToCart(product);
 }
 
 }
