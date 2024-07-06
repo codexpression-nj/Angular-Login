@@ -14,6 +14,7 @@ import { NgFor } from '@angular/common';
     imports: [NgFor,HeaderComponent, RouterOutlet, ProductDetailComponent]
 })
 export class HomeComponent {
+    
     constructor(private productService:ProductsService){
 
     }

@@ -22,11 +22,8 @@ export class AppComponent {
   isSignup: boolean = true;
   isLoggedIn = true;
 
-  constructor(private authService:AuthService){
-
-  }
-
   onToggleForm() {
     this.isSignup = !this.isSignup;
   }
+ 
 }

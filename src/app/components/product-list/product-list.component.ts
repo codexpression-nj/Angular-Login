@@ -14,6 +14,9 @@ export class ProductListComponent {
   products: any[] = [];
   categories: any[] = [];
   selectedCategory: string = '';
+  searchQuery: string = '';
+  filteredProducts: any[] = [];
+
 
 constructor(private productService:ProductsService,private cartService:CartService){
 
@@ -45,5 +48,18 @@ onCategoryChange(event: Event): void {
 addToCart(product: any) {
   this.cartService.addToCart(product);
 }
+
+onSearchChange(event: Event): void {
+  const inputElement = event.target as HTMLInputElement;
+  this.searchQuery = inputElement.value.toLowerCase();
+  this.filterProducts();
+}
+
+filterProducts(): void {
+  this.filteredProducts = this.products.filter(product =>
+    product.title.toLowerCase().includes(this.searchQuery)
+  );
+}
+
 
 }
