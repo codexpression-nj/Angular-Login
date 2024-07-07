@@ -10,13 +10,14 @@ import { Observable } from 'rxjs';
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from "./components/home/home.component";
 import { ProductListComponent } from "./components/product-list/product-list.component";
+import { CartComponent } from "./components/cart/cart.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent, HomeComponent, ProductListComponent]
+    imports: [CommonModule, RouterOutlet, SignupFormComponent, SigninFormComponent, SigninIntroComponent, SignupIntroComponent, HomeComponent, ProductListComponent, CartComponent]
 })
 export class AppComponent {
   isSignup: boolean = true;
@@ -24,6 +25,10 @@ export class AppComponent {
 
   onToggleForm() {
     this.isSignup = !this.isSignup;
+  }
+
+  showCart(){
+    
   }
  
 }
