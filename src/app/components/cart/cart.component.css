@@ -1,0 +1,56 @@
+/* src/app/components/cart/cart.component.css */
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  .cart-item div {
+    flex: 1;
+  }
+  
+  .cart-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .cart-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .cart-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background-color: #d32f2f;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+  }
+  
