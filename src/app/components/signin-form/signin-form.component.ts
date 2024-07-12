@@ -15,14 +15,16 @@ export class SigninFormComponent {
   password: string = '';
   errorMessage: string = '';
 
+  
   constructor(private authService : AuthService, private router:Router) {
     
   }
 
  async onSubmit() {
   try {
-    await this.authService.signIn(this.username, this.password);
-    console.log('Sign-in successful!');
+    (await this.authService.signIn(this.username, this.password)).user;
+    console.log();
+    
   } catch (error) {
   }
 }
