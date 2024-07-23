@@ -1,1 +1,15 @@
-<p>checkout works!</p>
+<div class="checkout">
+  <h2>Checkout</h2>
+  <div *ngIf="cartItems.length === 0">Your cart is empty</div>
+  <div *ngFor="let item of cartItems" class="checkout-item">
+    <img [src]="item.image" alt="{{ item.title }}">
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p><strong>Price:</strong> {{ item.price }}</p>
+    </div>
+  </div>
+  <div *ngIf="cartItems.length > 0">
+    <h3>Total: {{ totalAmount }}</h3>
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
+</div>
