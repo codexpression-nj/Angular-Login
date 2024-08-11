@@ -21,7 +21,7 @@ import { CartComponent } from "./components/cart/cart.component";
 })
 export class AppComponent {
   isSignup: boolean = true;
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   onToggleForm() {
     this.isSignup = !this.isSignup;

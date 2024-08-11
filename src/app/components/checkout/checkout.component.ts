@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [],
+  imports: [NgIf,NgFor],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })

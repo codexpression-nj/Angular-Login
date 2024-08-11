@@ -23,7 +23,7 @@ export class SigninFormComponent {
  async onSubmit() {
   try {
     (await this.authService.signIn(this.username, this.password)).user;
-    console.log();
+    console.log('signin');
     
   } catch (error) {
   }
