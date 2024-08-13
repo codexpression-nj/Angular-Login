@@ -24,6 +24,7 @@ export class SigninFormComponent {
   try {
     (await this.authService.signIn(this.username, this.password)).user;
     console.log('signin');
+    // this.rout
     
   } catch (error) {
   }
